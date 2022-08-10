@@ -41,10 +41,11 @@
         "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
         "swiftlint": "node-swiftlint",
         "docgen": "docgen --api NavigationBarPlugin --output-readme README.md --output-json dist/docs.json",
-        "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+        "build": "npm run clean && tsc && rollup -c rollup.config.js",
         "clean": "rimraf ./dist",
         "watch": "tsc --watch",
-        "prepublishOnly": "npm run build"
+        "prepublishOnly": "npm run build",
+        "prepare": "npm run build"
     },
     "devDependencies": {
         "@capacitor/android": "^4.0.1",
